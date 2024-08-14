@@ -260,7 +260,4 @@ button:nth-child(2):hover {
         width: 100%;
     }
 
-    .design .circle {
-        display: none; /* Hide circles on small screens to maximize space */
-    }
 }
