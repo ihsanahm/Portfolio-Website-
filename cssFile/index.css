@@ -10,7 +10,6 @@
     height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: row; /* Maintain the original layout */
 }
 
 .navlist ul {
@@ -21,8 +20,6 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    background-color: #262525;
-    z-index: 10;
 }
 
 .navlist li {
@@ -51,9 +48,6 @@
 .rightContainer {
     width: 30%;
     background: linear-gradient(-45deg, #3677FF, #262525 70%);
-    display: flex; /* Keep visible */
-    justify-content: center;
-    align-items: center;
 }
 
 .Icons .fa-brands {
@@ -179,12 +173,7 @@ button:nth-child(2):hover {
 
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 1024px) {
-    .Main-container {
-        flex-direction: column;
-    }
-
     .Left-container, .rightContainer {
-        width: 100%;
         height: auto;
         padding: 1rem;
     }
@@ -200,73 +189,31 @@ button:nth-child(2):hover {
     }
 
     .design .circle {
-        width: 15rem;
-        top: auto;
-        left: 50%;
-        transform: translate(-50%, 0);
+        width: 20rem;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
     }
 
     .circle:nth-child(2) {
-        width: 12rem;
+        width: 16rem;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .navlist ul {
-        gap: 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    .Left-container {
-        padding-left: 2rem;
-    }
-
-    .Icons .fa-brands {
-        font-size: 1.4rem;
-    }
-
-    .contant h2 {
-        font-size: 1.3rem;
-    }
-
-    .contant h1 {
-        font-size: 2.2rem;
-    }
-
-    .btn-container button {
-        font-size: 1rem;
-        padding: .7rem 1.2rem;
-    }
-
-    .design .circle {
-        width: 12rem;
-        left: 50%;
-        top: 70%;
-    }
-
-    .circle:nth-child(2) {
-        width: 10rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .navlist ul {
+    .Left-container, .rightContainer {
         flex-direction: column;
-        height: auto;
-        padding: 1rem 0;
-    }
-
-    .Main-container {
-        flex-direction: column;
-    }
-
-    .Left-container {
+        align-items: center;
         width: 100%;
-        padding: 1rem;
     }
 
-    .rightContainer {
-        display: none; /* Hide the right container on small screens */
+    .contant {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .btn-container {
+        flex-direction: column;
     }
 
     .Icons {
@@ -274,17 +221,39 @@ button:nth-child(2):hover {
         gap: 1.5rem;
     }
 
+    .design .circle {
+        width: 15rem;
+        left: 50%;
+        top: 65%;
+    }
+
+    .circle:nth-child(2) {
+        width: 12rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Left-container, .rightContainer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navlist ul {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .Icons {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
     .contant h1 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
     }
 
     .contant p {
-        font-size: 0.9rem;
-    }
-
-    .btn-container {
-        flex-direction: column;
-        gap: 1rem;
+        font-size: 1rem;
     }
 
     .btn-container button {
@@ -292,6 +261,6 @@ button:nth-child(2):hover {
     }
 
     .design .circle {
-        display: none; /* Hide circles on small screens */
+        display: none; /* Hide circles on small screens to maximize space */
     }
 }
