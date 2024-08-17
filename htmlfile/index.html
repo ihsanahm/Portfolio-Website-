@@ -5,36 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="/cssFile/index.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/
-    font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="Main-container">
         <div class="navlist">
             <ul>
-                <li><a href="/htmlfile/index.html">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Work</a></li>
                 <li><a href="#">Project</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
-        
+
         <div class="Left-container">
             <div class="Icons">
                 <i class="fa-brands fa-linkedin-in"></i>
                 <i class="fa-brands fa-x-twitter"></i>
                 <i class="fa-brands fa-github"></i>
                 <i class="fa-brands fa-google"></i>
-                
+
             </div>
             <div class="contant">
                 <h2>Hi!, I am <span>Ihsan Ahmed</span> </h2>
@@ -52,12 +46,43 @@
         <div class="design">
             <div class="circle"></div>
             <div class="circle">
-                
+
             </div>
         </div>
 
-
-
     </div>
+    <section class="work-page">
+        <div class="container">
+            <h1 class="title">My Work</h1>
+            <div id="projects" class="projects-grid"></div>
+        </div>
+    </section>
+    <header class="header">
+        <h1>My Projects</h1>
+    </header>
+
+    <section class="carousel">
+        <div class="carousel-container" id="carouselContainer">
+            <div class="carousel-item">
+                <img src="/Images/myPhoto.jpg" alt="Project 1">
+                <div class="carousel-caption">
+                    <h2>Project Name 1</h2>
+                    <p>A brief description of Project 1.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/Images/myPhoto.jpg" alt="Project 2">
+                <div class="carousel-caption">
+                    <h2>Project Name 2</h2>
+                    <p>A brief description of Project 2.</p>
+                </div>
+            </div>
+            <!-- Add more carousel items as needed -->
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </section>
+
+<script src="/JsFile/index.js"></script>
 </body>
 </html>
