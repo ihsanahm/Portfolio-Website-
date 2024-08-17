@@ -63,27 +63,3 @@ projects.forEach(project => {
 
     projectsGrid.appendChild(projectCard);
 });
-
-
-//servicse js 
-
-
-
-const services = [
-    
-];
-
-const container = document.querySelector('.container');
-
-services.forEach(service => {
-    const serviceCard = document.createElement('div');
-    serviceCard.className = 'service-card';
-
-    serviceCard.innerHTML = `
-        <div class="icon">${service.icon}</div>
-        <h2>${service.title}</h2>
-        <p>${service.description}</p>
-    `;
-
-    container.appendChild(serviceCard);
-});
