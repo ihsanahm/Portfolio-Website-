@@ -273,16 +273,6 @@ body{
     display: block;
 }
 
-.carousel-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 250px;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 5px;
-}
-
 button.prev,
 button.next {
     position: absolute;
@@ -307,7 +297,57 @@ button.prev:hover,
 button.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+/* Servece styling */
 
+.header {
+    text-align: center;
+    padding: 40px;
+    background-color: #333;
+    color: #fff;
+}
+
+.services-section {
+    padding: 60px 20px;
+   background-color: #262525;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-card .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service-card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #666;
+}
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 1024px) {
     .Left-container, .rightContainer {

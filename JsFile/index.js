@@ -1,3 +1,35 @@
+
+//script for projects  
+let currentIndex = 0;
+
+function showSlide(index) {
+    const carouselContainer = document.getElementById('carouselContainer');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    if (index >= totalItems) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalItems - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    const offset = -currentIndex * 100;
+    carouselContainer.style.transform = `translateX(${offset}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+setInterval(nextSlide, 3000); // Automatically move to the next slide every 3 seconds
+
+
 const projects = [
     {
         title: 'Project Name 1',
@@ -33,32 +65,25 @@ projects.forEach(project => {
 });
 
 
-//script for projects  
-let currentIndex = 0;
+//servicse js 
 
-function showSlide(index) {
-    const carouselContainer = document.getElementById('carouselContainer');
-    const items = document.querySelectorAll('.carousel-item');
-    const totalItems = items.length;
 
-    if (index >= totalItems) {
-        currentIndex = 0;
-    } else if (index < 0) {
-        currentIndex = totalItems - 1;
-    } else {
-        currentIndex = index;
-    }
 
-    const offset = -currentIndex * 100;
-    carouselContainer.style.transform = `translateX(${offset}%)`;
-}
+const services = [
+    
+];
 
-function nextSlide() {
-    showSlide(currentIndex + 1);
-}
+const container = document.querySelector('.container');
 
-function prevSlide() {
-    showSlide(currentIndex - 1);
-}
+services.forEach(service => {
+    const serviceCard = document.createElement('div');
+    serviceCard.className = 'service-card';
 
-setInterval(nextSlide, 3000); // Automatically move to the next slide every 3 seconds
+    serviceCard.innerHTML = `
+        <div class="icon">${service.icon}</div>
+        <h2>${service.title}</h2>
+        <p>${service.description}</p>
+    `;
+
+    container.appendChild(serviceCard);
+});
