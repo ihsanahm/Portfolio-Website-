@@ -43,6 +43,18 @@ const projects = [
         imageUrl: 'link-to-project-image2.jpg',
         link: 'https://link-to-project2.com',
     },
+    {
+        title: 'Project Name 3',
+        description: 'A brief description of the project, technologies used, and your role in it.',
+        imageUrl: 'link-to-project-image1.jpg',
+        link: 'https://link-to-project1.com',
+    },
+    {
+        title: 'Project Name 4',
+        description: 'A brief description of the project, technologies used, and your role in it.',
+        imageUrl: 'link-to-project-image2.jpg',
+        link: 'https://link-to-project2.com',
+    },
     // Add more projects as needed
 ];
 
@@ -62,4 +74,28 @@ projects.forEach(project => {
     `;
 
     projectsGrid.appendChild(projectCard);
+});
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from submitting the traditional way
+
+    // Capture the form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    // Simple validation (you can add more)
+    if (name === '' || email === '' || subject === '' || message === '') {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    // Here you can add code to send the form data to your server (e.g., using fetch or XMLHttpRequest)
+    console.log('Form submitted:', { name, email, subject, message });
+
+    // Clear the form after submission
+    document.getElementById('contactForm').reset();
+
+    // Provide feedback to the user
+    alert('Thank you for your message!');
 });
