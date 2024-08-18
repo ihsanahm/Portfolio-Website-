@@ -188,12 +188,12 @@ button:nth-child(2):hover {
 }
 .container {
     max-width: 100%;
-    margin-left: 10%;
-    margin-top: 10%;
+    
     padding: 20px;
 }
 .projects-grid {
-    display: grid;
+    width: 100%;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
